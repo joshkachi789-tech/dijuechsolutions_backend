@@ -98,7 +98,7 @@ if (process.env.NODE_ENV === "development") {
 
 // ─── Health check ──────────────────────────────────────────────────────────
 app.get("/api/health", (_req, res) => {
-  res.json({ status: "ok", env: process.env.NODE_ENV });
+  res.json({ status: "ok", env: process.env.NODE_ENV, timestamp: new Date().toISOString() });
 });
 
 // ─── Routes ────────────────────────────────────────────────────────────────
