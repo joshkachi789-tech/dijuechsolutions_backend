@@ -24,7 +24,8 @@ app.use(helmet({
 const allowedOrigins = [
   process.env.FRONTEND_URL ?? "http://localhost:3000",
   "http://localhost:3000",
-  "http://192.168.100.8:3000",  // local network
+  "http://192.168.100.8:3000",
+  "https://dijuechsolutionsbackend.onrender.com",
 ];
 
 app.use(
