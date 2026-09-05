@@ -99,7 +99,12 @@ if (process.env.NODE_ENV === "development") {
 
 // ─── Health check ──────────────────────────────────────────────────────────
 app.get("/api/health", (_req, res) => {
-  res.json({ status: "ok", env: process.env.NODE_ENV, timestamp: new Date().toISOString() });
+  res.json({ ok: true });
+});
+
+// Minimal ping — for cron-job.org keep-alive (returns 2 bytes)
+app.get("/ping", (_req, res) => {
+  res.send("ok");
 });
 
 // ─── Routes ────────────────────────────────────────────────────────────────
