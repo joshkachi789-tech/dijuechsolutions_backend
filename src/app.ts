@@ -26,6 +26,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://192.168.100.8:3000",
   "https://dijuechsolutionsbackend.onrender.com",
+  "https://dijutechsolutions-lime.vercel.app",
 ];
 
 app.use(
